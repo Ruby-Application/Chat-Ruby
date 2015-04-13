@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tb Usuarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nm usuario</th>
+      <th>Email</th>
+      <th>Senha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tb_usuarios.each do |tb_usuario| %>
+      <tr>
+        <td><%= tb_usuario.nm_usuario %></td>
+        <td><%= tb_usuario.email %></td>
+        <td><%= tb_usuario.senha %></td>
+        <td><%= link_to 'Show', tb_usuario %></td>
+        <td><%= link_to 'Edit', edit_tb_usuario_path(tb_usuario) %></td>
+        <td><%= link_to 'Destroy', tb_usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tb usuario', new_tb_usuario_path %>

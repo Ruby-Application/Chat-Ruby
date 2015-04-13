@@ -1,0 +1,29 @@
+<%= form_for(@tb_usuario) do |f| %>
+  <% if @tb_usuario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tb_usuario.errors.count, "error") %> prohibited this tb_usuario from being saved:</h2>
+
+      <ul>
+      <% @tb_usuario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nm_usuario %><br>
+    <%= f.text_field :nm_usuario %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :senha %><br>
+    <%= f.text_field :senha %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

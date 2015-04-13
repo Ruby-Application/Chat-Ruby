@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tb Mensagems</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Texto</th>
+      <th>Dt envio</th>
+      <th>Tb usuario</th>
+      <th>Tb usuario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tb_mensagems.each do |tb_mensagem| %>
+      <tr>
+        <td><%= tb_mensagem.texto %></td>
+        <td><%= tb_mensagem.dt_envio %></td>
+        <td><%= tb_mensagem.tb_usuario %></td>
+        <td><%= tb_mensagem.tb_usuario %></td>
+        <td><%= link_to 'Show', tb_mensagem %></td>
+        <td><%= link_to 'Edit', edit_tb_mensagem_path(tb_mensagem) %></td>
+        <td><%= link_to 'Destroy', tb_mensagem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tb mensagem', new_tb_mensagem_path %>

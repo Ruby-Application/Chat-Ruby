@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nm usuario:</strong>
+  <%= @tb_usuario.nm_usuario %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @tb_usuario.email %>
+</p>
+
+<p>
+  <strong>Senha:</strong>
+  <%= @tb_usuario.senha %>
+</p>
+
+<%= link_to 'Edit', edit_tb_usuario_path(@tb_usuario) %> |
+<%= link_to 'Back', tb_usuarios_path %>

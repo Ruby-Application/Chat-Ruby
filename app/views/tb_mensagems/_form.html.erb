@@ -1,0 +1,33 @@
+<%= form_for(@tb_mensagem) do |f| %>
+  <% if @tb_mensagem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tb_mensagem.errors.count, "error") %> prohibited this tb_mensagem from being saved:</h2>
+
+      <ul>
+      <% @tb_mensagem.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :texto %><br>
+    <%= f.text_area :texto %>
+  </div>
+  <div class="field">
+    <%= f.label :dt_envio %><br>
+    <%= f.datetime_select :dt_envio %>
+  </div>
+  <div class="field">
+    <%= f.label :tb_usuario_id %><br>
+    <%= f.text_field :tb_usuario_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tb_usuario_id %><br>
+    <%= f.text_field :tb_usuario_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
