@@ -1,0 +1,105 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@charset "utf-8";
+
+html{
+	position:relative;
+	min-height:100%;
+}
+
+body{
+	margin-bottom: 75px;
+}
+
+.navbar {
+	background-color: #1d9ce5;
+	background-image: none;
+	min-height: 70px;
+	border-radius: 0;
+}
+
+.navbar-brand {
+	padding: 25px 15px;
+}
+
+.navbar-toggle {
+	margin-top: 18px;
+	margin-bottom: 18px;
+}
+
+@media (min-width: 768px) {
+	.navbar-nav > li > a {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+}
+
+.btn {
+	border-radius: 0;
+}
+
+.btn-primary {
+	background-color: #1d6ce5;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 3px solid #0b29c1;
+	background-image: none;
+}
+
+.alert-success {
+	background-color: #dff0d8;
+	color: #b2dba1;
+	border-color: #b2dba1;
+}
+
+.alert-info {
+	background-color: #d9edf7;
+	color: #9acfea;
+	border-color: #9acfea;
+}
+
+.alert-warning {
+	background-color: #fcf8e3;
+	color: #f5e79e;
+	border-color: #f5e79e;
+}
+
+.alert-danger {
+	background-color: #f2dede;
+	color: #dca7a7;
+	border-color: #dca7a7;
+}
+
+footer {
+	background-color: #1d9ce5;
+	height: 75px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	
+	.container {
+		height: inherit;
+
+		#descricao-rodape{
+			display: table-cell;
+			color: #fff;
+			vertical-align: middle;
+			height: inherit;
+		}
+	}
+}
