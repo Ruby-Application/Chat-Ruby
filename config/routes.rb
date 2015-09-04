@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  resources :tb_mensagems
-  resources :tb_usuarios
+  # resources :tb_mensagems
+  # resources :tb_usuarios
+  # resources :hello_world
+
+  get 'hello-world' => 'hello_world#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
