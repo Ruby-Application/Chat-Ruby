@@ -61,27 +61,25 @@ body{
 	background-image: none;
 }
 
+.alert {
+	border-radius: 0;
+	border: 0;
+	border-bottom: 3px solid;
+}
+
 .alert-success {
-	background-color: #dff0d8;
-	color: #b2dba1;
-	border-color: #b2dba1;
+	border-color: #8acc9b;
 }
 
 .alert-info {
-	background-color: #d9edf7;
-	color: #9acfea;
-	border-color: #9acfea;
+	border-color: #5ca9cf;
 }
 
 .alert-warning {
-	background-color: #fcf8e3;
-	color: #f5e79e;
-	border-color: #f5e79e;
+	border-color: #f3cb86;
 }
 
 .alert-danger {
-	background-color: #f2dede;
-	color: #dca7a7;
 	border-color: #dca7a7;
 }
 
