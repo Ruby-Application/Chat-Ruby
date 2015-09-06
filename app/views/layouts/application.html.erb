@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title>Chat Ruby on Rails</title>
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<%= stylesheet_link_tag    'application', media: 'screen, print', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 </head>
 <body>
@@ -39,7 +40,12 @@
 			<div id="descricao-rodape">&copy; Desenvolvido por Pedro Marcelo e Daniele Batista</div>
 		</div>
 	</footer>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script async defer type="text/javascript" src="js/jquery-ui.js"></script>
+	<script async defer type="text/javascript" src="js/bootstrap.js"></script>
+	<script async defer type="text/javascript" src="js/jquery.cralert.js"></script>
+	<script async defer type="text/javascript" src="js/react.js"></script>
+	<%= javascript_include_tag 'application', {'data-turbolinks-track' => true, 'async' => '', 'defer' => ''} %>
 	
 </body>
 </html>
