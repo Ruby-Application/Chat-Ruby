@@ -15,7 +15,7 @@ if (typeof jQuery !== "undefined" && typeof React !== "undefined") {
 				e.preventDefault();
 				this.props.onMessageSubmit({
 					author : {
-						nome : "Pedro Marcelo"
+						nome : window.localStorage.name
 					},
 					texto : React.findDOMNode(this.refs.crMessage).value,
 					dt_envio : new Date()
@@ -38,6 +38,10 @@ if (typeof jQuery !== "undefined" && typeof React !== "undefined") {
 		});
 
 		jQuery.react.chatListItem = React.createClass({displayName : "ChatReact.ChatListItem",
+			componentDidMount : function() {
+				var $ul = jQuery('ul.cr-list');
+				$ul.scrollTop($ul[0].scrollHeight);
+			},
 			render : function() {
 				var message = this.props.message;
 

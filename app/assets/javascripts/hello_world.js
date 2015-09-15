@@ -1,3 +1,7 @@
+if (typeof window.localStorage.name === "undefined") {
+	window.localStorage.setItem("name", prompt("Informe o seu nome:"));
+}
+
 var chat = new ChatReact([
 	{
 		author : {
